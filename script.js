@@ -1,40 +1,124 @@
-// ============================
-// MediChoice Pharmacy
-// script.js
-// ============================
+/*====================================
+MEDICHOICE PHARMACY
+script.js - PART 3A
+====================================*/
 
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
+// Wait for page to load
+document.addEventListener("DOMContentLoaded", () => {
 
-        const target = document.querySelector(this.getAttribute("href"));
+    /*=========================
+      Smooth Scroll
+    =========================*/
 
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(link => {
+
+        link.addEventListener("click", e => {
+
+            const targetId = link.getAttribute("href");
+
+            if (targetId === "#") return;
+
+            e.preventDefault();
+
+            const target = document.querySelector(targetId);
+
+            if (target) {
+
+                target.scrollIntoView({
+
+                    behavior: "smooth",
+                    block: "start"
+
+                });
+
+            }
+
+        });
+
     });
-});
 
-// Sticky header shadow
-const header = document.querySelector(".header");
+    /*=========================
+      Sticky Header
+    =========================*/
 
-window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
 
-    if (window.scrollY > 80) {
-        header.style.boxShadow = "0 10px 25px rgba(0,0,0,.15)";
-    } else {
-        header.style.boxShadow = "0 5px 15px rgba(0,0,0,.08)";
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 50) {
+
+            header.classList.add("sticky");
+
+        } else {
+
+            header.classList.remove("sticky");
+
+        }
+
+    });
+
+    /*=========================
+      Active Navigation
+    =========================*/
+
+    const sections = document.querySelectorAll("section");
+
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const top = section.offsetTop - 120;
+
+            if (window.scrollY >= top) {
+
+                current = section.getAttribute("id");
+
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (
+                current &&
+                link.getAttribute("href") === "#" + current
+            ) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+    /*=========================
+      Mobile Menu
+    =========================*/
+
+    const menuButton = document.querySelector(".menu-toggle");
+
+    const nav = document.querySelector("nav ul");
+
+    if (menuButton && nav) {
+
+        menuButton.addEventListener("click", () => {
+
+            nav.classList.toggle("show-menu");
+
+        });
+
     }
 
-});
-
-// Fade animation
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
+});    entries.forEach(entry=>{
 
         if(entry.isIntersecting){
 
@@ -107,3 +191,5 @@ if (footer) {
 }
 
 console.log("MediChoice Pharmacy Website Loaded Successfully"); you for choosing MediChoice Pharmacy!');
+
+
