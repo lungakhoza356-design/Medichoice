@@ -1,37 +1,787 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width,initial-scale=1'>
-    
-    <title>MediChoice Pharmacy</title>
-    <link rel='stylesheet' href='style.css'>
-  </head>
-  
-  <body>
-    <header>
-      <h1>MediChoice Pharmacy</h1>
-      
-      <nav>
-        <a>Home</a> 
-        <a>About</a> 
-        <a>Services</a> 
-        <a>Contact</a>
-      </nav>
-    </header>
-    
-    <section class='hero'>
-      <h2>Your Trusted Community Pharmacy</h2>
-      <p>Serving Daantjie, Nelspruit.</p>
-      <button>Order Prescription</button>
-    </section>
-    
-    <section class='cards'>
-      <div class='card'>Prescription</div>
-      <div class='card'>Wellness</div>
-      <div class='card'>Baby Care</div>
-    </section>
-    <footer>©2026 MediChoice Pharmacy</footer>
-    <script src='script.js'></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MediChoice Pharmacy | Your Health. Our Priority.</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--==========================
+TOP BAR
+===========================-->
+
+<div class="top-bar">
+
+<div class="container">
+
+<div class="left-top">
+
+<span>
+<i class="fa-solid fa-location-dot"></i>
+
+Daantjie Trust,
+Nelspruit
+
+</span>
+
+<span>
+
+<i class="fa-solid fa-phone"></i>
+
++27 XX XXX XXXX
+
+</span>
+
+</div>
+
+<div class="right-top">
+
+<a href="#">
+Track Order
+</a>
+
+<a href="#">
+Find a Store
+</a>
+
+<a href="#">
+Health Advice
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!--==========================
+HEADER
+===========================-->
+
+<header>
+
+<div class="container">
+
+<div class="logo">
+
+<i class="fa-solid fa-prescription-bottle-medical"></i>
+
+<h2>MediChoice</h2>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Search medicines, vitamins, skincare...">
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+</div>
+
+<div class="header-icons">
+
+<div>
+
+<i class="fa-regular fa-user"></i>
+
+<p>Account</p>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-heart"></i>
+
+<p>Wishlist</p>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<p>Cart</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!--==========================
+NAVIGATION
+===========================-->
+
+<nav>
+
+<div class="container">
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Shop</a></li>
+
+<li><a href="#">Medicine</a></li>
+
+<li><a href="#">Vitamins</a></li>
+
+<li><a href="#">Baby Care</a></li>
+
+<li><a href="#">Beauty</a></li>
+
+<li><a href="#">Health Services</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<!--==========================
+HERO SECTION
+===========================-->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div class="hero-content">
+
+<span class="offer">
+
+Trusted Healthcare Since 2026
+
+</span>
+
+<h1>
+
+Quality Healthcare
+For Every Family
+
+</h1>
+
+<p>
+
+Shop prescription medicine,
+wellness products,
+beauty essentials,
+baby care,
+and trusted health brands
+all in one place.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="shop-btn">
+
+Shop Now
+
+</a>
+
+<a href="#" class="outline-btn">
+
+Order Prescription
+
+</a>
+
+</div>
+
+<div class="hero-features">
+
+<div>
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<p>
+
+Fast Collection
+
+</p>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-shield-heart"></i>
+
+<p>
+
+Trusted Medicines
+
+</p>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-user-doctor"></i>
+
+<p>
+
+Qualified Pharmacists
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img
+src="images/hero-pharmacy.png"
+alt="MediChoice Pharmacy">
+
+</div>
+
+</div>
+
+</section>
+
+<!--==========================
+PROMOTION STRIP
+===========================-->
+
+<section class="promo-strip">
+
+<div class="container promo-grid">
+
+<div class="promo-card">
+
+<i class="fa-solid fa-percent"></i>
+
+<h3>
+
+Weekly Specials
+
+</h3>
+
+<p>
+
+Save up to 30%
+
+</p>
+
+</div>
+
+<div class="promo-card">
+
+<i class="fa-solid fa-capsules"></i>
+
+<h3>
+
+Prescription Medicines
+
+</h3>
+
+<p>
+
+Trusted & Affordable
+
+</p>
+
+</div>
+
+<div class="promo-card">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<h3>
+
+Health Checks
+
+</h3>
+
+<p>
+
+Professional Care
+
+</p>
+
+</div>
+
+<div class="promo-card">
+
+<i class="fa-solid fa-leaf"></i>
+
+<h3>
+
+Wellness
+
+</h3>
+
+<p>
+
+Healthy Living
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+     SHOP BY CATEGORY
+========================== -->
+
+<section class="categories">
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Shop by Category</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <img src="images/categories/medicine.png" alt="Medicine">
+                <h3>Medicine</h3>
+            </div>
+
+            <div class="category-card">
+                <img src="images/categories/vitamins.png" alt="Vitamins">
+                <h3>Vitamins</h3>
+            </div>
+
+            <div class="category-card">
+                <img src="images/categories/baby.png" alt="Baby Care">
+                <h3>Baby Care</h3>
+            </div>
+
+            <div class="category-card">
+                <img src="images/categories/beauty.png" alt="Beauty">
+                <h3>Beauty</h3>
+            </div>
+
+            <div class="category-card">
+                <img src="images/categories/wellness.png" alt="Wellness">
+                <h3>Wellness</h3>
+            </div>
+
+            <div class="category-card">
+                <img src="images/categories/personal-care.png" alt="Personal Care">
+                <h3>Personal Care</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     FEATURED PRODUCTS
+========================== -->
+
+<section class="featured-products">
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Featured Products</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="product-grid">
+
+            <article class="product-card">
+
+                <span class="badge sale">15% OFF</span>
+
+                <img src="images/products/product1.jpg"
+                     alt="Vitamin C Tablets">
+
+                <h3>Vitamin C Tablets</h3>
+
+                <p class="brand">MediChoice Wellness</p>
+
+                <div class="price">
+
+                    <span class="new-price">R129.99</span>
+
+                    <span class="old-price">R149.99</span>
+
+                </div>
+
+                <button class="cart-btn">
+                    Add to Cart
+                </button>
+
+            </article>
+
+            <article class="product-card">
+
+                <span class="badge">Popular</span>
+
+                <img src="images/products/product2.jpg"
+                     alt="Pain Relief">
+
+                <h3>Pain Relief Tablets</h3>
+
+                <p class="brand">Trusted Healthcare</p>
+
+                <div class="price">
+
+                    <span class="new-price">R89.99</span>
+
+                </div>
+
+                <button class="cart-btn">
+                    Add to Cart
+                </button>
+
+            </article>
+
+            <article class="product-card">
+
+                <span class="badge sale">20% OFF</span>
+
+                <img src="images/products/product3.jpg"
+                     alt="Baby Lotion">
+
+                <h3>Baby Lotion</h3>
+
+                <p class="brand">Baby Care</p>
+
+                <div class="price">
+
+                    <span class="new-price">R69.99</span>
+
+                    <span class="old-price">R89.99</span>
+
+                </div>
+
+                <button class="cart-btn">
+                    Add to Cart
+                </button>
+
+            </article>
+
+            <article class="product-card">
+
+                <span class="badge new">New</span>
+
+                <img src="images/products/product4.jpg"
+                     alt="Multivitamins">
+
+                <h3>Daily Multivitamins</h3>
+
+                <p class="brand">Health Essentials</p>
+
+                <div class="price">
+
+                    <span class="new-price">R159.99</span>
+
+                </div>
+
+                <button class="cart-btn">
+                    Add to Cart
+                </button>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     PROMOTIONAL BANNER
+========================== -->
+
+<section class="promo-banner">
+
+    <div class="container banner-content">
+
+        <div>
+
+            <h2>Healthy Living Starts Here</h2>
+
+            <p>
+
+                Discover quality healthcare products,
+                vitamins, wellness essentials, and
+                professional pharmacy services for
+                the whole family.
+
+            </p>
+
+            <a href="#" class="shop-btn">
+                Explore Products
+            </a>
+
+        </div>
+
+        <div>
+
+            <img src="images/banner-pharmacy.png"
+                 alt="Healthcare Banner">
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- ==========================
+     HEALTH SERVICES
+========================== -->
+
+<section class="health-services">
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Health Services</h2>
+            <p>Professional healthcare services from our experienced pharmacy team.</p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <i class="fa-solid fa-prescription-bottle-medical"></i>
+                <h3>Prescription Dispensing</h3>
+                <p>Fast and accurate prescription dispensing by qualified pharmacists.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h3>Blood Pressure Checks</h3>
+                <p>Quick blood pressure monitoring to support your overall health.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-syringe"></i>
+                <h3>Vaccination Services</h3>
+                <p>Selected vaccinations and seasonal healthcare services.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-user-doctor"></i>
+                <h3>Health Advice</h3>
+                <p>Professional guidance on medication and healthy living.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     WHY CHOOSE US
+========================== -->
+
+<section class="why-us">
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Why Choose MediChoice?</h2>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <h3>✔ Genuine Medicines</h3>
+                <p>We stock trusted healthcare products from reputable suppliers.</p>
+            </div>
+
+            <div class="why-card">
+                <h3>✔ Qualified Team</h3>
+                <p>Friendly pharmacists committed to excellent customer care.</p>
+            </div>
+
+            <div class="why-card">
+                <h3>✔ Affordable Prices</h3>
+                <p>Competitive pricing across medicines, wellness and personal care.</p>
+            </div>
+
+            <div class="why-card">
+                <h3>✔ Convenient Location</h3>
+                <p>Serving the Daantjie community in Nelspruit with quality healthcare.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     NEWSLETTER
+========================== -->
+
+<section class="newsletter">
+
+    <div class="container">
+
+        <h2>Stay Updated</h2>
+
+        <p>
+            Receive updates about promotions, wellness tips and new arrivals.
+        </p>
+
+        <form>
+
+            <input
+                type="email"
+                placeholder="Enter your email">
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     CONTACT
+========================== -->
+
+<section class="contact">
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Visit Our Pharmacy</h2>
+        </div>
+
+        <div class="contact-grid">
+
+            <div>
+
+                <h3>MediChoice Pharmacy</h3>
+
+                <p>
+                    📍 Daantjie Trust<br>
+                    Nelspruit, Mpumalanga
+                </p>
+
+                <p>
+                    📞 +27 XX XXX XXXX
+                </p>
+
+                <p>
+                    📧 info@medichoice.co.za
+                </p>
+
+                <p>
+                    🕒 Monday – Saturday<br>
+                    08:00 – 18:00
+                </p>
+
+            </div>
+
+            <div class="map-placeholder">
+
+                <h3>Google Map</h3>
+
+                <p>
+                    Embed your Google Maps location here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <h2>MediChoice Pharmacy</h2>
+
+            <p>
+                Your trusted community pharmacy providing quality healthcare, wellness products and professional pharmaceutical advice.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Customer Care</h3>
+
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 MediChoice Pharmacy. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
 </html>
