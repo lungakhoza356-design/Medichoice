@@ -1,0 +1,1 @@
+Open index.html in a browser. Replace placeholder images in the images folder and update contact details.
