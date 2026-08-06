@@ -1,41 +1,32 @@
-.header-container{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:25px;
-}
+<header>
+    <div class="container header-container">
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    flex-shrink:0;
-}
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+            <h1><span class="medi">Medi</span><span class="choice">Choice</span></h1>
+        </div>
 
-.search-box{
-    flex:1;
-    max-width:600px;
-}
+        <div class="search-box">
+            <input type="text" placeholder="Search medicines...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
 
-.header-icons{
-    display:flex;
-    align-items:center;
-    gap:30px;
-    margin-left:auto;
-    flex-shrink:0;
-}
+        <div class="header-icons">
+            <div>
+                <i class="far fa-user"></i>
+                <p>Account</p>
+            </div>
 
-.header-icons div{
-    text-align:center;
-}
+            <div>
+                <i class="far fa-heart"></i>
+                <p>Wishlist</p>
+            </div>
 
-.header-icons i{
-    font-size:24px;
-    color:var(--primary);
-}
+            <div>
+                <i class="fas fa-shopping-cart"></i>
+                <p>Cart</p>
+            </div>
+        </div>
 
-.header-icons span,
-.header-icons p{
-    display:block;
-    font-size:14px;
-}
+    </div>
+</header>
