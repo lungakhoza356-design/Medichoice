@@ -5,7 +5,7 @@ STYLE.CSS - PART 2A
 
 :root{
 
---primary:#0077C8;
+--primary:#00c800;
 --secondary:#00B894;
 --dark:#1F2937;
 --light:#F8FAFC;
@@ -140,6 +140,12 @@ gap:12px;
 
 }
 
+.logo-img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
 .logo i{
 
 font-size:42px;
@@ -155,6 +161,19 @@ color:var(--primary);
 
 }
 
+.logo-text{
+    font: size 2rem;;
+    font-weight:700;
+    margin: 0;
+}
+
+.medi{
+    color: #00c800;
+}
+
+.choice{
+    color: #0844e9;
+}
 /*=========================
 SEARCH
 ==========================*/
@@ -288,7 +307,7 @@ gap:70px;
 
 display:inline-block;
 background:#DFFAF1;
-color:#00A56B;
+color:#08ca29;
 padding:8px 18px;
 border-radius:30px;
 margin-bottom:20px;
@@ -428,7 +447,7 @@ margin-bottom:12px;
 
 color:var(--grey);
 
-}}
+}
 
 /*=====================================
 PART 2B
@@ -627,7 +646,7 @@ background:#E53935;
 
 .badge.new{
 
-background:#00B894;
+background:#21e906;
 
 }
 
@@ -650,7 +669,7 @@ transition:.3s;
 
 .cart-btn:hover{
 
-background:#009E77;
+background:#39e006;
 
 }
 
@@ -670,7 +689,7 @@ display:grid;
 grid-template-columns:1fr 1fr;
 align-items:center;
 gap:60px;
-background:linear-gradient(135deg,#0077C8,#00B894);
+background:linear-gradient(135deg,#00c800,#1ee004);
 padding:60px;
 border-radius:25px;
 color:white;
@@ -730,7 +749,7 @@ background:#f2f2f2;
 .btn{
     display:inline-block;
     padding:12px 24px;
-    background:#00b894;
+    background:#09f314;
     color:#fff;
     text-decoration:none;
     border-radius:8px;
@@ -739,15 +758,15 @@ background:#f2f2f2;
 }
 
 .btn:hover{
-    background:#00966f;
+    background:#0fd608;
     transform:translateY(-2px);
 }
 
 .btn-outline{
     display:inline-block;
     padding:12px 24px;
-    border:2px solid #00b894;
-    color:#00b894;
+    border:2px solid #23e209;
+    color:#2cdd09;
     border-radius:8px;
     text-decoration:none;
     margin-left:15px;
@@ -755,7 +774,7 @@ background:#f2f2f2;
 }
 
 .btn-outline:hover{
-    background:#00b894;
+    background:#1bd603;
     color:#fff;
 }
 
@@ -772,7 +791,7 @@ background:#f2f2f2;
 
 .hero-content h1{
     font-size:3rem;
-    color:#0b4d78;
+    color:#00c800;
     margin-bottom:20px;
 }
 
@@ -800,7 +819,7 @@ background:#f2f2f2;
 .section-title{
     text-align:center;
     font-size:2.2rem;
-    color:#0b4d78;
+    color:#00c800;
     margin:70px 0 40px;
 }
 
@@ -841,7 +860,7 @@ background:#f2f2f2;
 
 .category i{
     font-size:2.5rem;
-    color:#00b894;
+    color:#1edf05;
     margin-bottom:15px;
 }
 
@@ -849,8 +868,11 @@ background:#f2f2f2;
 .service-card h3,
 .product h3{
     margin-bottom:10px;
-    color:#0b4d78;
-}adding:16px;background:#0b74b8;color:#fff}nav a{margin:0 8px}.hero{padding:60px;text-align:center;background:#e8f8f2}.cards{display:flex;gap:16px;justify-content:center;padding:30px;flex-wrap:wrap}.card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 8px #0002}button{background:#16a34a;color:#fff;border:0;padding:12px 20px;border-radius:6px}
+    color:#00c800;
+}adding:16px;
+background:#0b74b8;
+color:#fff;
+}nav a{margin:0 8px}.hero{padding:60px;text-align:center;background:#e8f8f2}.cards{display:flex;gap:16px;justify-content:center;padding:30px;flex-wrap:wrap}.card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 8px #0002}button{background:#16a34a;color:#fff;border:0;padding:12px 20px;border-radius:6px}
 
 
 /* ===================================
@@ -875,13 +897,13 @@ background:#f2f2f2;
 }
 
 .product p{
-    color:#00b894;
+    color:#2de009;
     font-weight:600;
     margin:10px 0;
 }
 
 .product button{
-    background:#0077b6;
+    background:#00c800;
     color:#fff;
     border:none;
     padding:12px 25px;
@@ -891,7 +913,7 @@ background:#f2f2f2;
 }
 
 .product button:hover{
-    background:#005b8d;
+    background:#00c800;
 }
 
 /* About Section */
@@ -911,7 +933,7 @@ background:#f2f2f2;
 }
 
 .about h2{
-    color:#0b4d78;
+    color:#00c800;
     margin-bottom:20px;
     font-size:2.3rem;
 }
@@ -934,7 +956,7 @@ background:#f2f2f2;
 
 .testimonial h4{
     margin-top:20px;
-    color:#0077b6;
+    color:#00c800;
 }
 
 /* Contact */
@@ -957,7 +979,7 @@ background:#f2f2f2;
 /* Footer */
 
 footer{
-    background:#0b4d78;
+    background:#00c800;
     color:#fff;
     text-align:center;
     padding:40px 20px;
@@ -979,7 +1001,7 @@ footer p{
 }
 
 ::-webkit-scrollbar-thumb{
-    background:#00b894;
+    background:#1edf04;
     border-radius:10px;
 }
 
@@ -1085,7 +1107,7 @@ footer p{
 
     border-radius:50%;
 
-    background:#00b894;
+    background:#10fd07;
 
     color:white;
 
@@ -1105,7 +1127,7 @@ footer p{
 
 .top-btn:hover{
 
-    background:#00966f;
+    background:#32e605;
 
     transform:scale(1.1);
 
@@ -1215,7 +1237,7 @@ color:var(--grey);
 
 padding:90px 0;
 text-align:center;
-background:linear-gradient(135deg,#0077C8,#00B894);
+background:linear-gradient(135deg,#00c800,#20e206);
 color:white;
 
 }
@@ -1305,7 +1327,7 @@ justify-content:center;
 align-items:center;
 min-height:320px;
 text-align:center;
-background:#EEF7FB !important;
+background:#EEF7FB;
 
 }
 
@@ -1521,4 +1543,5 @@ font-size:24px;
 
 }
 
+   }
    }
