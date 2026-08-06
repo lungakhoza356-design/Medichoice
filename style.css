@@ -1,671 +1,193 @@
-/*==================================================
+/*====================================
 MEDICHOICE PHARMACY
-STYLE.CSS - PART 2
-Categories • Featured Products • Promo Banner
-==================================================*/
-
-/* Section Title */
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-size:2.3rem;
-    color:var(--dark);
-    margin-bottom:10px;
-}
-
-.section-title p{
-    color:var(--grey);
-    max-width:650px;
-    margin:auto;
-}
-
-/* ======================
-Categories
-====================== */
-
-.categories{
-    padding:90px 0;
-    background:#fff;
-}
-
-.category-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:30px;
-}
-
-.category-card{
-    background:#fff;
-    padding:35px 25px;
-    text-align:center;
-    border-radius:16px;
-    box-shadow:var(--shadow);
-    transition:var(--transition);
-    border:1px solid #eef2f7;
-}
-
-.category-card:hover{
-    transform:translateY(-8px);
-    border-color:var(--primary);
-}
-
-.category-card img{
-    width:90px;
-    height:90px;
-    object-fit:contain;
-    margin:0 auto 20px;
-}
-
-.category-card h3{
-    color:var(--dark);
-    font-size:1.2rem;
-    margin-bottom:10px;
-}
-
-.category-card p{
-    color:var(--grey);
-    font-size:.95rem;
-}
-
-/* ======================
-Featured Products
-====================== */
-
-.featured-products{
-    padding:90px 0;
-    background:#f8fafc;
-}
-
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
-
-.product-card{
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:var(--shadow);
-    transition:var(--transition);
-    position:relative;
-}
-
-.product-card:hover{
-    transform:translateY(-10px);
-}
-
-.product-card img{
-    width:100%;
-    height:220px;
-    object-fit:contain;
-    padding:20px;
-    background:#fff;
-}
-
-.product-info{
-    padding:20px;
-}
-
-.product-info h3{
-    font-size:1.2rem;
-    margin-bottom:10px;
-    color:var(--dark);
-}
-
-.product-brand{
-    color:var(--grey);
-    font-size:.9rem;
-    margin-bottom:12px;
-}
-
-/* Rating */
-
-.rating{
-    color:#f5b301;
-    margin-bottom:15px;
-    font-size:.95rem;
-}
-
-/* Price */
-
-.price{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom:20px;
-}
-
-.current-price{
-    font-size:1.4rem;
-    font-weight:700;
-    color:var(--primary);
-}
-
-.old-price{
-    color:#9ca3af;
-    text-decoration:line-through;
-}
-
-/* Product Button */
-
-.product-btn{
-    width:100%;
-    border:none;
-    background:var(--primary);
-    color:#fff;
-    padding:14px;
-    border-radius:8px;
-    font-size:1rem;
-    font-weight:600;
-    cursor:pointer;
-    transition:var(--transition);
-}
-
-.product-btn:hover{
-    background:#00b248;
-}
-
-/* Badges */
-
-.badge{
-    position:absolute;
-    top:15px;
-    left:15px;
-    background:var(--primary);
-    color:#fff;
-    padding:6px 12px;
-    border-radius:30px;
-    font-size:.8rem;
-    font-weight:600;
-}
+script.js - PART 3A
+====================================*/
 
-.badge.sale{
-    background:#ef4444;
-}
+// Wait for page to load
+document.addEventListener("DOMContentLoaded", () => {
 
-.badge.new{
-    background:var(--secondary);
-}
+    /*=========================
+      Smooth Scroll
+    =========================*/
 
-/* ======================
-Promotional Banner
-====================== */
+    const links = document.querySelectorAll('a[href^="#"]');
 
-.promo-banner{
-    padding:90px 0;
-    background:#fff;
-}
+    links.forEach(link => {
 
-.banner{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:50px;
-    align-items:center;
-    background:linear-gradient(135deg,var(--primary),var(--secondary));
-    border-radius:20px;
-    padding:60px;
-    color:#fff;
-}
+        link.addEventListener("click", e => {
 
-.banner h2{
-    font-size:2.5rem;
-    margin-bottom:20px;
-}
+            const targetId = link.getAttribute("href");
 
-.banner p{
-    margin-bottom:30px;
-    line-height:1.8;
-}
+            if (targetId === "#") return;
 
-.banner .btn{
-    background:#fff;
-    color:var(--primary);
-}
+            e.preventDefault();
 
-.banner .btn:hover{
-    background:#f1f5f9;
-}
+            const target = document.querySelector(targetId);
 
-.banner img{
-    width:100%;
-    max-width:450px;
-    margin:auto;
-}
+            if (target) {
 
-/* ======================
-Responsive
-====================== */
+                target.scrollIntoView({
 
-@media(max-width:992px){
+                    behavior: "smooth",
+                    block: "start"
 
-.banner{
-    grid-template-columns:1fr;
-    text-align:center;
-}
+                });
 
-.banner img{
-    max-width:320px;
-}
+            }
 
-}
+        });
 
-@media(max-width:768px){
+    });
 
-.section-title h2{
-    font-size:2rem;
-}
+    /*=========================
+      Sticky Header
+    =========================*/
 
-.category-grid,
-.product-grid{
-    grid-template-columns:1fr;
-}
+    const header = document.querySelector("header");
 
-.banner{
-    padding:40px 25px;
-}
+    window.addEventListener("scroll", () => {
 
-.banner h2{
-    font-size:2rem;
-}
+        if (window.scrollY > 50) {
 
-}
+            header.classList.add("sticky");
 
-/*==================================================
-MEDICHOICE PHARMACY
-STYLE.CSS - PART 3
-Services • Why Choose Us • Newsletter
-Contact • Footer • Animations • Responsive
-==================================================*/
-
-/* ======================
-Health Services
-====================== */
-
-.health-services{
-    padding:90px 0;
-    background:#ffffff;
-}
+        } else {
 
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
+            header.classList.remove("sticky");
 
-.service-card{
-    background:#fff;
-    padding:35px 30px;
-    border-radius:16px;
-    text-align:center;
-    box-shadow:var(--shadow);
-    transition:var(--transition);
-}
+        }
 
-.service-card:hover{
-    transform:translateY(-10px);
-}
+    });
 
-.service-card i{
-    font-size:48px;
-    color:var(--primary);
-    margin-bottom:20px;
-}
+    /*=========================
+      Active Navigation
+    =========================*/
 
-.service-card h3{
-    margin-bottom:15px;
-    color:var(--dark);
-}
+    const sections = document.querySelectorAll("section");
 
-.service-card p{
-    color:var(--grey);
-    line-height:1.8;
-}
+    const navLinks = document.querySelectorAll("nav a");
 
-/* ======================
-Why Choose Us
-====================== */
+    window.addEventListener("scroll", () => {
 
-.why-us{
-    padding:90px 0;
-    background:#f8fafc;
-}
+        let current = "";
 
-.why-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
+        sections.forEach(section => {
 
-.why-card{
-    background:#fff;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:var(--shadow);
-    transition:var(--transition);
-}
+            const top = section.offsetTop - 120;
 
-.why-card:hover{
-    transform:translateY(-8px);
-}
+            if (window.scrollY >= top) {
 
-.why-card i{
-    font-size:40px;
-    color:var(--secondary);
-    margin-bottom:20px;
-}
+                current = section.getAttribute("id");
 
-.why-card h3{
-    margin-bottom:15px;
-    color:var(--primary);
-}
+            }
 
-.why-card p{
-    color:var(--grey);
-    line-height:1.7;
-}
+        });
 
-/* ======================
-Newsletter
-====================== */
-
-.newsletter{
-    padding:90px 20px;
-    text-align:center;
-    background:linear-gradient(135deg,var(--primary),var(--secondary));
-    color:#fff;
-}
+        navLinks.forEach(link => {
 
-.newsletter h2{
-    font-size:2.5rem;
-    margin-bottom:15px;
-}
+            link.classList.remove("active");
 
-.newsletter p{
-    max-width:650px;
-    margin:0 auto 35px;
-}
+            if (
+                current &&
+                link.getAttribute("href") === "#" + current
+            ) {
 
-.newsletter form{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
+                link.classList.add("active");
 
-.newsletter input{
-    width:420px;
-    max-width:100%;
-    padding:16px 20px;
-    border:none;
-    border-radius:8px;
-    outline:none;
-    font-size:16px;
-}
+            }
 
-.newsletter button{
-    padding:16px 30px;
-    border:none;
-    border-radius:8px;
-    background:#fff;
-    color:var(--primary);
-    font-weight:700;
-    cursor:pointer;
-    transition:var(--transition);
-}
+        });
 
-.newsletter button:hover{
-    background:#f3f4f6;
-}
+    });
 
-/* ======================
-Contact
-====================== */
+    /*=========================
+      Mobile Menu
+    =========================*/
 
-.contact{
-    padding:90px 0;
-    background:#fff;
-}
+    const menuButton = document.querySelector(".menu-toggle");
 
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
+    const nav = document.querySelector("nav ul");
 
-.contact-info,
-.contact-form{
-    background:#fff;
-    padding:35px;
-    border-radius:16px;
-    box-shadow:var(--shadow);
-}
+    if (menuButton && nav) {
 
-.contact-info h2,
-.contact-form h2{
-    margin-bottom:20px;
-}
+        menuButton.addEventListener("click", () => {
 
-.contact-info p{
-    margin-bottom:15px;
-    color:var(--grey);
-}
+            nav.classList.toggle("show-menu");
 
-.contact-form input,
-.contact-form textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:18px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    outline:none;
-    font-family:inherit;
-}
+        });
 
-.contact-form textarea{
-    min-height:160px;
-    resize:vertical;
-}
+    }
 
-.contact-form button{
-    width:100%;
-    padding:15px;
-    border:none;
-    background:var(--primary);
-    color:#fff;
-    font-size:16px;
-    font-weight:600;
-    border-radius:8px;
-    cursor:pointer;
-    transition:var(--transition);
-}
+});    entries.forEach(entry=>{
 
-.contact-form button:hover{
-    background:#00b248;
-}
+        if(entry.isIntersecting){
 
-/* ======================
-Footer
-====================== */
-
-footer{
-    background:#0f172a;
-    color:#fff;
-    padding:70px 0 0;
-}
+            entry.target.classList.add("show");
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:40px;
-}
+        }
 
-.footer-box h3,
-.footer-box h2{
-    margin-bottom:20px;
-}
+    });
 
-.footer-box p{
-    color:#cbd5e1;
-    line-height:1.8;
-}
 
-.footer-box ul{
-    padding:0;
-}
 
-.footer-box li{
-    margin-bottom:12px;
-}
+document.querySelectorAll(
+".category,.service-card,.product,.testimonial,.about"
+).forEach(el=>{
 
-.footer-box a{
-    color:#cbd5e1;
-    transition:var(--transition);
-}
+    el.classList.add("hidden");
 
-.footer-box a:hover{
-    color:#fff;
-}
+    observer.observe(el);
 
-.social-icons{
-    display:flex;
-    gap:15px;
-    margin-top:20px;
-}
+});
 
-.social-icons a{
-    width:40px;
-    height:40px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:50%;
-    background:rgba(255,255,255,.08);
-    color:#fff;
-    transition:var(--transition);
-}
+// Back to Top Button
 
-.social-icons a:hover{
-    background:var(--primary);
-}
+const topButton=document.createElement("button");
 
-.footer-bottom{
-    margin-top:50px;
-    padding:20px;
-    text-align:center;
-    border-top:1px solid rgba(255,255,255,.1);
-    color:#cbd5e1;
-}
+topButton.innerHTML="↑";
 
-/* ======================
-Back To Top
-====================== */
-
-.top-btn{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:50px;
-    height:50px;
-    border:none;
-    border-radius:50%;
-    background:var(--primary);
-    color:#fff;
-    font-size:22px;
-    cursor:pointer;
-    display:none;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-    transition:var(--transition);
-    z-index:1000;
-}
+topButton.className="top-btn";
 
-.top-btn:hover{
-    transform:scale(1.1);
-}
+document.body.appendChild(topButton);
 
-/* ======================
-Animations
-====================== */
-
-.hidden{
-    opacity:0;
-    transform:translateY(40px);
-    transition:all .8s ease;
-}
+window.addEventListener("scroll",()=>{
 
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
+    if(window.scrollY>500){
 
-/* ======================
-Scrollbar
-====================== */
+        topButton.style.display="block";
 
-::-webkit-scrollbar{
-    width:10px;
-}
+    }
 
-::-webkit-scrollbar-thumb{
-    background:var(--primary);
-    border-radius:10px;
-}
+    else{
 
-::-webkit-scrollbar-track{
-    background:#eee;
-}
+        topButton.style.display="none";
 
-/* ======================
-Responsive
-====================== */
+    }
 
-@media(max-width:992px){
+});
 
-.contact-grid,
-.footer-grid{
-    grid-template-columns:1fr;
-}
+topButton.addEventListener("click",()=>{
 
-.footer-grid{
-    text-align:center;
-}
+    window.scrollTo({
 
-.social-icons{
-    justify-content:center;
-}
+        top:0,
 
-}
+        behavior:"smooth"
 
-@media(max-width:768px){
+    });
 
-.newsletter h2{
-    font-size:2rem;
-}
+});
 
-.contact{
-    padding:70px 0;
-}
+// Footer Year
 
-.contact-info,
-.contact-form{
-    padding:25px;
-}
+const year = new Date().getFullYear();
 
-}
+const footer = document.querySelector("footer p:last-child");
 
-@media(max-width:480px){
+if (footer) {
 
-.newsletter input,
-.newsletter button{
-    width:100%;
-}
+    footer.innerHTML = `© ${year} MediChoice Pharmacy. All Rights Reserved.`;
 
-.footer-bottom{
-    font-size:14px;
 }
 
-}
+console.log("MediChoice Pharmacy Website Loaded Successfully"); you for choosing MediChoice Pharmacy
